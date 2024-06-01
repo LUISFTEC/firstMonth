@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOVE B & L - Segundo Mes</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <link rel="stylesheet" type="text/css" href="plantilla.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/stylesinicio.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/stylessobremi.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/stylesskills.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/stylesproyecto.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="segundomes.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/subir.css" />
+    <link rel="stylesheet" href="CSS/segundomes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav id="miBarraNavegacion">
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <a href="index.html" class="enlace">B&L</a>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="primermes.html">Primer Mes</a></li>
+        <li><a href="segundomes.html">Segundo Mes</a></li>
+        <li><a href="#suenosfuturos">Sueños Futuros</a></li>
+        <li><a href="#nuestroespacio">Nuestro Espacio</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <section class="main-section">
+      <div class="container1">
+        <div class="header">
+          <h1 id="typing"></h1>
+        </div>
+
+        <div class="mensaje-box">
+          <p>
+            Hoy celebramos nuestro segundo mes juntos, mi amor. ¡Gracias por
+            cada momento compartido!
+          </p>
+          <!-- Botón para mostrar la flor animada -->
+          <button id="verSorpresaBtn" onclick="mostrarFlor()">
+            Ver Sorpresa
+          </button>
+        </div>
+
+        <!-- Contenedor para la flor animada (se ocultará inicialmente) -->
+        <div id="florAnimada" class="flor-animada" style="display: none">
+          <div class="flower">
+            <div class="stem"></div>
+            <div class="petal petal1"></div>
+            <div class="petal petal2"></div>
+            <div class="petal petal3"></div>
+            <div class="petal petal4"></div>
+            <div class="center"></div>
+          </div>
+          <!-- Botón para cerrar la sorpresa -->
+          <button onclick="cerrarFlor()">Cerrar</button>
+        </div>
+        <!-- Imagen que se mostrará al final -->
+        <img id="fotoFinal" src="img/Bri luis.png" class="photo" alt="Foto de nosotros">
+    </div>
+        
+        
+        <!-- Elemento de audio -->
+        <audio id="miAudio" src="KaashPaigeLoveSongs.mp3"></audio>
+      </div>
+    </section>
+
+    <a href="#" class="subir-inicio">
+      <i class="fa fa-arrow-up"></i> <span class="texto-subir">Subir</span>
+    </a>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-center">
+              &copy; 2024 Luis y Bri. Juntos desde el 1 de abril de 2024. #1 de
+              cada mes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scriptnav.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let text = "¡Feliz segundo mes, mi amor! 💕"; // Texto a animar
+        let typingContainer = document.getElementById("typing"); // Elemento donde se escribe el texto
+        let i = 0;
+        let speed = 50; // Velocidad en milisegundos
+
+        function typeWriter() {
+          if (i < text.length) {
+            typingContainer.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+
+        typeWriter(); // Inicia la animación al cargar la página
+      });
+
+      function mostrarFlor() {
+        document.getElementById("florAnimada").style.display = "flex";
+        document.getElementById("verSorpresaBtn").style.display = "none";
+      }
+
+      function cerrarFlor() {
+        document.getElementById("florAnimada").style.display = "none";
+        document.getElementById("verSorpresaBtn").style.display = "block";
+      }
+      function mostrarFlor() {
+        document.getElementById("florAnimada").style.display = "flex";
+        document.getElementById("verSorpresaBtn").style.display = "none";
+        var audio = document.getElementById("miAudio");
+        audio.play();
+      }
+
+      function cerrarFlor() {
+        document.getElementById("florAnimada").style.display = "none";
+        document.getElementById("verSorpresaBtn").style.display = "block";
+        var audio = document.getElementById("miAudio");
+        audio.pause();
+        audio.currentTime = 0; // Reinicia la música
+      }
+
+
+function cerrarFlores() {
+    document.getElementById('floresAnimadas').style.display = 'none';
+    document.getElementById('verSorpresaBtn').style.display = 'block';
+    var audio = document.getElementById('miAudio');
+    audio.pause();
+    audio.currentTime = 0; // Reinicia la música
+}
+
+function mostrarFlor() {
+    document.getElementById('florAnimada').style.display = 'flex';
+    document.getElementById('verSorpresaBtn').style.display = 'none';
+    var audio = document.getElementById('miAudio');
+    audio.play();
+
+    // Reiniciar animaciones
+    document.querySelectorAll('.stem, .petal, .center').forEach(el => {
+        el.style.animation = 'none';
+        el.offsetHeight; // Triggers reflow
+        el.style.animation = '';
+    });
+}
+
+function cerrarFlor() {
+    document.getElementById('florAnimada').style.display = 'none';
+    document.getElementById('verSorpresaBtn').style.display = 'block';
+    var audio = document.getElementById('miAudio');
+    audio.pause();
+    audio.currentTime = 0; // Reinicia la música
+}
+
+
+function mostrarFlor() {
+    document.getElementById('florAnimada').style.display = 'flex';
+    document.getElementById('verSorpresaBtn').style.display = 'none';
+    var audio = document.getElementById('miAudio');
+    audio.play();
+
+    // Reiniciar animaciones
+    document.querySelectorAll('.stem, .petal, .center').forEach(el => {
+        el.style.animation = 'none';
+        el.offsetHeight; // Triggers reflow
+        el.style.animation = '';
+    });
+
+    // Añadir clase para desaparecer
+    setTimeout(() => {
+        document.querySelector('.stem').classList.add('disappear');
+        document.querySelectorAll('.petal').forEach(el => el.classList.add('disappear'));
+        document.querySelector('.center').classList.add('disappear');
+    }, 1000); // Retraso antes de iniciar la desaparición
+
+    // Mostrar la foto al final de la animación
+    setTimeout(() => {
+        document.getElementById('fotoFinal').style.display = 'block';
+    }, 6000); // Tiempo suficiente para que la flor desaparezca
+}
+
+function cerrarFlor() {
+    document.getElementById('florAnimada').style.display = 'none';
+    document.getElementById('verSorpresaBtn').style.display = 'block';
+    var audio = document.getElementById('miAudio');
+    audio.pause();
+    audio.currentTime = 0; // Reinicia la música
+
+    // Ocultar la foto
+    document.getElementById('fotoFinal').style.display = 'none';
+}
+
+
+    </script>
+  </body>
+</html>

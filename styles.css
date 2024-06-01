@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
+    z-index: -1; /* Colocar por debajo de otros elementos */
+}
+
+body {
+    background: url('love.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333; /* Color de texto principal */
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Ajusta la altura según tu menú y footer */
+    padding-top: 60px; /* Espacio para el menú */
+    padding-bottom: 60px; /* Espacio para el footer */
+}
+
+.container1 {
+    padding: 20px;
+    text-align: center;
+    background: white; /* Fondo blanco para el contenido */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    border-radius: 10px; /* Esquinas redondeadas opcionales */
+    width: 60%; /* Ajusta esto según la anchura que desees para la caja en el centro */
+    margin: auto; /* Centrado horizontal */
+}
+
+button {
+    background-color: #ff47da; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+}
+
+button:hover {
+    background-color: #a23fab; /* Color de fondo del botón al pasar el mouse */
+    transform: translateY(-2px); /* Desplazamiento hacia arriba */
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2); /* Aumento de la sombra al pasar el mouse */
+}
+
+.mensaje-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 20px;
+    margin-top: 20px; /* Añade espacio en la parte superior */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra suave para mejorar la legibilidad */
+}
+
+.mensaje-adicional {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    width: 90%; /* Ajusta el ancho del mensaje */
+    max-width: 600px; /* Ancho máximo del mensaje */
+}
+
+.animated-image {
+    max-height: 200px; /* Ajusta este valor según desees */
+    width: auto; /* Para mantener la proporción de la imagen */
+    margin-top: 20px; /* Espacio adicional en la parte superior */
+    display: block; /* Cambiar a bloque para que ocupe todo el ancho disponible */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

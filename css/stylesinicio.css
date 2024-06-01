@@ -1,0 +1,93 @@
+.presentacion {
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url("../fondos/love.png") no-repeat center center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  text-align: center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.bienvenida {
+  font-size: 2em; /* Ajusta según necesites */
+  margin-bottom: 0.5em;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+}
+.presentacion p{
+  color: #ffffff;
+  
+}
+
+.presentacion h2 {
+  font-size: 2.5em; /* Ajusta según necesites */
+  margin-bottom: 0.5em;
+  color: #ffffff;
+  text-transform: none;
+}
+
+.presentacion i {
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+
+.descripcion {
+  font-size: 1.5em; /* Ajusta según necesites */
+  margin-bottom: 1em;
+}
+
+.correo {
+  color: inherit; /* Hereda el color del texto */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.boton {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: 2px solid #ffffff; /* Borde blanco */
+  color: #ffffff; /* Texto blanco */
+  background-color: rgba(52, 73, 94, 0.7); /* Fondo oscuro */
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.boton:hover {
+  background-color: #ffffff; /* Fondo blanco al pasar el mouse */
+  color: #34495e; /* Texto oscuro al pasar el mouse */
+  border: 2px solid #34495e; /* Borde oscuro al pasar el mouse */
+}
+
+
+/* Media query para pantallas de 500px o menos */
+@media (max-width: 500px) {
+  .botones {
+    display: flex;
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+  }
+
+  .botones .boton {
+    margin-bottom: 10px; /* Añade un poco de espacio entre los botones */
+  }
+
+  .correo-texto {
+    display: none; /* Oculta el texto en pantallas pequeñas */
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOVE B & L</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="img/logo.png" />
+  <link rel="stylesheet" type="text/css" href="plantilla.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/stylesinicio.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/stylessobremi.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/stylesskills.css" />
+  <link rel="stylesheet" type="text/css" href="CSS/stylesproyecto.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="CSS/subir.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+</head>
+
+<body>
+  <nav id="miBarraNavegacion">
+    <input type="checkbox" id="check" />
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <a href="index.html" class="enlace">B&L</a>
+    <ul id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="primermes.html">Primer Mes</a></li>
+      <li><a href="segundomes.html">Segundo Mes</a></li>
+      <li><a href="#suenosfuturos">Sueños Futuros</a></li>
+      <li><a href="#nuestroespacio">Nuestro Espacio</a></li>     
+    </ul>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <section class="main-section">
+    <div class="container1">
+      <div class="header">
+          <h1 id="typing"></h1>
+      </div>
+
+      <div class="mensaje-box">
+          <p>¡Hoy celebramos nuestro primer mes juntos, mi amor! 01/05/2024
+          </p>
+          <!-- Botón para mostrar el mensaje -->
+          <button onclick="mostrarMensaje()">Ver Mensaje</button>
+      </div>
+      
+      <!-- Contenedor para el mensaje adicional (se ocultará inicialmente) -->
+      <div id="mensajeAdicional" class="mensaje-adicional" style="display: none;">
+          <p>Mi amor, Han sido 30 días llenos de amor 💖, risas, momentos especiales y algunos desafíos 😣 que hemos superado juntos. A pesar de esos momentos difíciles, cada día a tu lado me hace más feliz 💕, Gracias por todo lo que compartimos, tanto las alegrías como las adversidades 😾, y por hacerme sentir amado en cada momento Espero que continuemos conociéndonos más y que nuestra relación 😍siga creciendo en confianza y amor Te amo con todo mi corazón 💖❤️💕.</p>
+          <!-- Botón para cerrar el mensaje -->
+          <button onclick="cerrarMensaje()">Cerrar</button>
+          <img src="amor.gif" alt="Nosotros" class="animated-image">
+      </div>
+    </div>
+  </section>
+
+  <audio id="miAudio" src="CarlaMorrisonCompartir.mp3">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <a href="#" class="subir-inicio">
+    <i class="fa fa-arrow-up"></i> <span class="texto-subir">Subir</span>
+  </a>
+
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">
+                    &copy; 2024 Luis y Bri. Juntos desde el 1 de abril de 2024. #1 de cada mes.
+                </p>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="scriptnav.js"></script>
+</body>
+
+</html>
